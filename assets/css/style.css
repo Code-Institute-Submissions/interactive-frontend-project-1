@@ -1,0 +1,49 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway: 100, 200, 300, 400, 500, 600, 700');
+
+.jumbotron {
+    
+   background-image: url("../images/sapplonside.jpg");
+   
+   background-repeat: no-repeat;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size:cover;
+   background-size: cover;
+   background-position: center;
+   min-height: 300px;
+   margin: 0px;
+   opacity: 0.8;
+} 
+
+body {
+    
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    color: black;
+   
+    
+}
+
+
+.h2{
+    
+    
+    font-family: Raleway;
+    font-size: 400;
+   
+}
+
+#map {
+  
+   margin: 0;
+        padding: 0;
+        height: 390px;
+        width: 100%;
+    
+}
+.container: {
+    
+    display: table;
+    top: 0;
+}
