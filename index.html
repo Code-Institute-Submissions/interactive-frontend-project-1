@@ -16,32 +16,39 @@
             <div class="row">
 		       <div class="col-md-12 jumbotron">
 		           <div class="text-center"> 
-		             <h2>Search Map Turkey</h2>
+		             <h2>Touristic Search Map of Turkey</h2>
 		               <div class="container">
-                        <div class="row">   <a href="https://"><img src="https://www.fg-a.com/content.screencast.com/users/fg-a/folders/world-flags/media/e9fceef3-1f91-439d-ac86-211a824be4fb/animated-turkey-flag.gif" width="68" height="50" border="0" alt="Flag Clipart" /></a> 
-                         <div class="col-xs-8 col-xs-offset-2">
-		                    <div class="input-group">
-                            <input type="hidden" name="search_param" value="all" id="search_param">         
-                            <input type="text" class="form-control" name="x" placeholder="Search term...">
-                              <div class="input-group-btn search-panel">
-                                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-                                <span id="search_concept">Search</span><span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu">
-                                <li><a href="#city"> <span <i class="glyphicon glyphicon-globe"></i></span> City</a></li>
-                                <li><a href="#hotel"> <span <i class="fa fa-bed"></i></span> Hotels</a></li>
-                                <li><a href="#attraction"> <span <i class="fa fa-fort-awesome"></i></span> Attraction</a></li>
-                                <li><a href="#resto"> <span <i class="fa fa-cutlery"></i></span> Restaurants</a></li>
-                                </ul>
-                             </div>
-                          </div>
+                        <div class="row"> 
+                             <p id="chosen-item">City
+                              <select id="city-select" onchange=city_change();">
+                                <option value ="IST">Istanbul</option>
+                                <option value ="IZM">Izmir</option>
+                                <option value ="ANK">Ankara</option>
+                                <option value ="AYT">Antalya</option>
+                                <option value ="AYD">Aydin</option>
+                                <option value ="MUG">Mugla</option>
+                                <option value ="CNK">Canakkale</option>
+                                <option value ="DNZ">Denizli</option>
+                              </select>
+                            </p>
+                            <p>&nbsp</p>
+                            <p id="chosen-item">Options
+                              <select id="opt-select" onchange>
+                                <option value ="GINFO">General Info</option>
+                                <option value ="HOTEL">Hotels</option>
+                                <option value ="ATRCT">Attractions</option>
+                                <option value ="RESTO">Restaurants</option>
+                                <option value ="PUBS">PUBS</option>
+                                <option value ="HOSTP">Hospitals</option>
+                                </select>
+                            </p>
+                        </div>
+                        </div>
                         </div>
                     </div>
                  </div>
                </div>
-                  </div>
-                </div>
-                   <div class="row">
+                         <div class="row">
                      <div id="map"></div>
                      <script>
                         function initMap() {
