@@ -1,76 +1,80 @@
 <!DOCTYPE html>
+
 <html>
-   <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css"></style>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>UtilityMapTurkey</title>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>     
-   </head>
-    <body>
-        <div class="container-fluid">
-            <div class="row">
-		       <div class="col-md-12 jumbotron">
-		           <div class="text-center"> 
-		             <h2>Touristic Search Map of Turkey</h2>
-		               <div class="container">
-                        <div class="row"> 
-                             <p id="chosen-item">City
-                              <select id="city-select" onchange=city_change();">
-                                <option value ="IST">Istanbul</option>
-                                <option value ="IZM">Izmir</option>
-                                <option value ="ANK">Ankara</option>
-                                <option value ="AYT">Antalya</option>
-                                <option value ="AYD">Aydin</option>
-                                <option value ="MUG">Mugla</option>
-                                <option value ="CNK">Canakkale</option>
-                                <option value ="DNZ">Denizli</option>
-                              </select>
-                            </p>
-                            <p>&nbsp</p>
-                            <p id="chosen-item">Options
-                              <select id="opt-select" onchange>
-                                <option value ="GINFO">General Info</option>
-                                <option value ="HOTEL">Hotels</option>
-                                <option value ="ATRCT">Attractions</option>
-                                <option value ="RESTO">Restaurants</option>
-                                <option value ="PUBS">PUBS</option>
-                                <option value ="HOSTP">Hospitals</option>
-                                </select>
-                            </p>
-                        </div>
-                        </div>
-                        </div>
-                    </div>
-                 </div>
-               </div>
-                         <div class="row">
-                     <div id="map"></div>
-                     <script>
-                        function initMap() {
-                            
-                            var location = {lat: 38.9637, lng: 35.243};
-                            var map = new google.maps.Map(document.getElementById("map"), {
-                                zoom: 6,
-                                center:location 
-                            }); 
-                            
-                            var marker = new google.maps.Marker({
-                                position:location,
-                                map: map
-                            });
-                            
-                        }
-                     </script>
-                     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkHpJ8HShpLwwPXfKMXjC5RxCx35MbRLc&callback=initMap"></script>
-                  </div>
-            </div>
-        </div> 
-      </body>
+  
+<head>
+  
+  <link rel="stylesheet" href=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type=
+  "text/css">
+  <link rel="stylesheet" href=
+  "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel=
+  "stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Touristic Search</title>
+</head>
+
+<body>
+  <div class="container-fluid row col-md-12 jumbotron text-center">
+    <h2>Touristic Search</h2>
+    <div id="controls">
+      <select id="country">
+        <option value="tu" selected>
+          Turkey
+        </option>
+        <option value="ie">
+          Ireland
+        </option>
+        <option value="fr">
+          France
+        </option>
+        <option value="uk">
+          United Kingdom
+        </option>
+      </select>
+      <div id="locationField">
+        <input id="autocomplete" placeholder="Enter a city" type="text">
+      </div>
+    </div>
+  </div>
+  <div class="contanier-fluid">
+    <div id="map"></div> <br>
+    <div id="listing">
+      <table id="resultsTable">
+        <tbody id="results"></tbody>
+      </table>
+    </div>
+    <div style="display: none" id="info-content">
+      <table>
+        <tr id="iw-url-row" class="iw_table_row">
+          <td id="iw-icon" class="iw_table_icon"></td>
+
+          <td id="iw-url"></td>
+        </tr>
+        <tr id="iw-address-row" class="iw_table_row">
+          <td class="iw_attribute_name">Address:</td>
+          <td id="iw-address"></td>
+        </tr>
+        <tr id="iw-phone-row" class="iw_table_row">
+          <td class="iw_attribute_name">Telephone:</td>
+          <td id="iw-phone"></td>
+        </tr>
+        <tr id="iw-rating-row" class="iw_table_row">
+          <td class="iw_attribute_name">Rating:</td>
+          <td id="iw-rating"></td>
+        </tr>
+        <tr id="iw-website-row" class="iw_table_row">
+          <td class="iw_attribute_name">Website:</td>
+          <td id="iw-website"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script src="assets/js/maps.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkHpJ8HShpLwwPXfKMXjC5RxCx35MbRLc&libraries=places&callback=initMap" async="" defer></script>
+</body>
 </html>
-
-
