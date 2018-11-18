@@ -38,7 +38,7 @@ body {
   
    margin: 0;
    padding: 0;
-   height: 390px;
+   height: 440px;
    width: 100%;
    
     
@@ -51,34 +51,35 @@ body {
     background-color: #fff;
     width: 20%;
     display: inline-table;
+    z-index: 6;
 }
 
       #autocomplete {
         width: 20%;
       }
       #country {
-        width: 100%;
+        width: 20%;
       }
       .placeIcon {
         width: 20px;
-        height: 34px;
-        margin: 4px;
+        height: 24px;
+        
       }
       
       .hotelIcon {
-        width: 24px;
-        height: 24px;
+        width: 30px;
+        height: 34px;
       }
       #resultsTable {
         border-collapse: collapse;
-        width: 240px;
+        width: 100%;
       }
       #rating {
         font-size: 13px;
         font-family: Arial Unicode MS;
       }
       .iw_table_row {
-        height: 18px;
+        height: 20px;
       }
       .iw_attribute_name {
         font-weight: bold;
@@ -87,3 +88,5 @@ body {
       .iw_table_icon {
         text-align: right;
       }
+
+

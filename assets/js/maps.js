@@ -55,7 +55,7 @@
         var place = autocomplete.getPlace();
         if (place.geometry) {
           map.panTo(place.geometry.location);
-          map.setZoom(16);
+          map.setZoom(14);
           search();
         } else {
           document.getElementById('autocomplete').placeholder = 'Enter a city';
@@ -166,7 +166,7 @@
         document.getElementById('iw-icon').innerHTML = '<img class="hotelIcon" ' +
             'src="' + place.icon + '"/>';
         document.getElementById('iw-url').innerHTML = '<b><a href="' + place.url +
-            '">' + place.name + '<\/a><\/b>';
+            '">' + place.name + '</a></b>';
         document.getElementById('iw-address').textContent = place.vicinity;
 
         if (place.formatted_phone_number) {
