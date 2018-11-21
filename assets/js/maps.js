@@ -97,7 +97,7 @@
             markers[i].setMap(null);
           }
         }
-        markers = [ ];
+        markers = [];
       }
       
          function setAutocompleteCountry() {
@@ -163,6 +163,7 @@
       }
       
         function buildIWContent(place) {
+          console.log(place)
         document.getElementById('iw-icon').innerHTML = '<img class="hotelIcon" ' +
             'src="' + place.icon + '"/>';
         document.getElementById('iw-url').innerHTML = '<b><a href="' + place.url +
@@ -176,6 +177,8 @@
         } else {
           document.getElementById('iw-phone-row').style.display = 'none';
         }
+        
+        
         
         if (place.website) {
           var fullUrl = place.website;

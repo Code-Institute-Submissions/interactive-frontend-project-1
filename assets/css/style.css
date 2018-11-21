@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Raleway: 100, 200, 300, 400, 500, 600, 700');
 
-.jumbotron {
+ .jumbotron {
     
    background-image: url("../images/sapplonside.jpg");
    
@@ -17,76 +17,89 @@
    
 } 
 
-body {
+  body {
     
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
+  -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size:cover;  
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
     
-}
-
-
-.text-center{
-    
-    color: #83dcec;
-    font-family: Raleway;
-    font-size: 400;
-    font-weight: 400;
-    font: bold;
-}
-
-#map {
-  
-   margin: 0;
-   padding: 0;
-   height: 440px;
-   width: 100%;
+   }
    
+  .text-center{
     
-}
+  color: #83dcec;
+  font-family: Raleway;
+  font-size: 400;
+  font-weight: 400;
+  font: bold;
+  }
 
-#controls :{
+  #map {
+  
+  margin: 0;
+  padding: 0;
+  height: 440px;
+  width: 100%;
     
-    border: 4px solid #83dcec;
-    padding: 10px 50px 10px 10px;
-    background-color: #fff;
-    width: 20%;
-    display: inline-table;
-    z-index: 6;
-}
+  }
 
-      #autocomplete {
-        width: 20%;
+  #controls :{
+    
+  border: 4px solid #83dcec;
+  padding: 10px 50px 10px 10px;
+  background-color: #fff;
+  width: 20%;
+  display: inline-table;
+  z-index: 6;  
+  }
+  
+  #autocomplete {
+  width: 20%;
       }
-      #country {
-        width: 20%;
+      
+  #country {
+    width: 100%;
       }
-      .placeIcon {
-        width: 20px;
-        height: 24px;
+      
+  .placeIcon {
+  width: 20px;
+  height: 24px;
+  margin: 4px;
         
       }
       
-      .hotelIcon {
-        width: 30px;
-        height: 34px;
+  .hotelIcon {
+  width: 30px;
+  height: 34px;
       }
-      #resultsTable {
-        border-collapse: collapse;
-        width: 100%;
+      
+  table {
+  font-size: 12px;
       }
-      #rating {
-        font-size: 13px;
-        font-family: Arial Unicode MS;
+  
+  #resultsTable {
+  border-collapse: collapse;
+  width: 100%;
       }
-      .iw_table_row {
-        height: 20px;
+      
+  #rating {
+  font-size: 13px;
+  font-family: Arial Unicode MS;
       }
-      .iw_attribute_name {
-        font-weight: bold;
-        text-align: right;
+      
+  .iw_table_row {
+  height: 20px;
       }
-      .iw_table_icon {
-        text-align: right;
+      
+  .iw_attribute_name {
+    font-weight: bold;
+    text-align: right;
+      }
+      
+  .iw_table_icon {
+    text-align: right;
       }
 
 
