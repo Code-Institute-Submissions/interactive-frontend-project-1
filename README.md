@@ -58,6 +58,6 @@ The photo used in this site was obtained from from (https://www.pexels.com/) [FR
 
 # Acknowledgements
 
-I received inspiration for this project from **Dublin Code of Institute** (https://codeinstitute.net/) and I specially thank to my mentor **Ivan Michlovic** for his guidance during this project. 
+I received inspiration for this project from **Dublin Code of Institute** (https://codeinstitute.net/) and I specially thank to my mentor **Victor Michlovic** for his guidance during this project. 
 Also, I thank to my beloved family for their understanding for the time while I worked on this project who supports me 
 to achieve my goals.
