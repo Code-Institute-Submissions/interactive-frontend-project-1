@@ -5,26 +5,6 @@ to be cost effective for me as Google Maps changed the policy.
 
 
 
-By updating the code in line 9, countries, cities and also different places types( ex. post office, dentist, embassy, etc) can be 
-added. 
-
-```
-'tu': {
-          center: {lat: 38.585146, lng: 30.675218},
-          zoom: 6
-        },
-        
-``` 
-and in line 65;
-```
-function search() {
-        var search = {
-          bounds: map.getBounds(),
-          types: ['lodging']
-        };  
-```        
-
-
 ## UX
 
 In the dropdown search, the user can search any country and then by choosing a city it shows the hotels with the green markers.
@@ -38,19 +18,22 @@ Upper half is for search section where the second bottom shows the conutry choos
 
 The weather app will be implemented according to the city chosen later on with 3 days forecast.
 
+
 # Technologies Used
 
 Bootstrap 3.3.7 (https://getbootstrap.com/docs/3.3/) is used for the design and Google Maps API (https://developers.google.com/maps/documentation/javascript/tutorial)is used to show the hotels.
-# Bugs:
 
-During implementation, I got JS notification  that some of the commands will be depreciated in 2019.
+# Possible Bugs:
+
 
 Also, I had issues with Ad Block when using Firefox where markers did not show up.
 
 
 # Deployment
  
-This applicaton is written om Cloud9 and then GitHub was chosen as a hosting platfrom. 
+I hosted this applicaton on GitHub as a hosting platfrom. 
+https://pages.github.com/ . I created a repository named interactive-frontend-project . After updating the last version, I saved as a master https://keving555.github.io/interactive-frontend-project/ . 
+
 
 
 # Content
